@@ -22,13 +22,16 @@ features — so it cannot distinguish fluent-but-empty writing from real substan
 
 ## Setup
 
-'''bash
+```bash
 git clone https://github.com/yixlinn/automated-essay-grader.git
 cd automated-essay-grader
 python -m venv .venv && source .venv/bin/activate # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+```
 
 Download the dataset from Kaggle PERSUADE 2.0 and place train.csv / test.csv in the project root.
 
-python train_model.py # trains the mode, writes model.pkl
-python combined.py # launches the app
+```bash
+python train_model.py # trains the model, writes model.pkl
+python "user-interface/combined.py" # launches the app
+```
